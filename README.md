@@ -1,10 +1,10 @@
 # Likha Web Page
 
 ## Table of contents
-*[General info](#genera-info)
-*[Technologies](#technologies)
-*[Setup](#setup)
-*[Project status](#project-status)
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Project status](#project-status)
 
 
 ## General info
