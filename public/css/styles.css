@@ -3,6 +3,20 @@ body {
   position: relative;
 }
 
+form{
+  text-align: left !important;
+  color: #747276;
+}
+
+textarea{
+  color: #747276;
+}
+
+.section-content{
+  padding: 3%;
+  background-color: #EDEEEE;
+  border-radius: 15px; 
+}
 
 .big-heading{
    font-size: 3.5rem; 
@@ -22,6 +36,7 @@ p {
 
 .gray-section {
   background-color: #878489;
+  color: #E1E4E4;
 }
 
 .container-fluid {
@@ -69,6 +84,7 @@ p {
 }
 .carousel .carousel-item {
   height: 600px;
+  
 }
 
 .carousel-img {
@@ -113,6 +129,20 @@ p {
 }
 
 
+.card{
+  border-radius: 15px !important;
+}
+
+/* Contacto section */
+
+.form-part{
+  padding: 1%;
+}
+
+.btn-enviar:hover{
+  background-color: #f2d205;
+  border-color: #f2d205;
+}
 
 /*Footer */
 footer {

@@ -14,7 +14,7 @@
 
 <body>
 
-
+    <!--Title section-->
     <section class="gray-section" id="title">
 
         <!-- NavBar-->
@@ -24,9 +24,8 @@
                 <a class="navbar-brand" href="">
                     <img src="images/likha-logo.png" class="nav-logo" alt="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle"
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -54,7 +53,7 @@
         </div>
         <!--Banner carousel-->
 
-        <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
+        <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel" data-interval="2000">
             <ol class="carousel-indicators">
                 <li data-target="#banner-carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#banner-carousel" data-slide-to="1"></li>
@@ -65,7 +64,7 @@
                 <div class="carousel-item active">
                     <div class="overlay"></div>
                     <img class="carousel-img" src="images/construction-0.jpg" alt="construction site">
-                    
+
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Diarios de obra</h1>
                     </div>
@@ -73,7 +72,7 @@
                 <div class="carousel-item">
                     <div class="overlay"></div>
                     <img class="carousel-img" src="images/construction-1.jpg" alt="construction site">
-                    
+
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Seguimiento</h1>
                     </div>
@@ -82,7 +81,7 @@
                 <div class="carousel-item">
                     <div class="overlay"></div>
                     <img class="carousel-img" src="images/construction-2.jpg" alt="construction site">
-                    
+
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Planificación</h1>
                     </div>
@@ -90,7 +89,7 @@
                 <div class="carousel-item">
                     <div class="overlay"></div>
                     <img class="carousel-img" src="images/construction-3.jpg" alt="construction site">
-                    
+
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Anteproyecto</h1>
                     </div>
@@ -108,7 +107,7 @@
 
     </section>
 
-
+    <!-- Servicios section-->
     <section class="white-section" id="servicios">
         <div class="container-fluid">
             <h1 class="big-heading">Servicios</h1>
@@ -121,12 +120,14 @@
                 <div class="col-lg-4">
                     <i class="fas fa-hard-hat fa-4x icon"></i>
                     <h3>Gestion de obra</h3>
-                    <p>Dirección de obra, controles (personal, stock de materiales, tareas, cornogramas), informes, registros, planillas de recepción de tareas</p>
+                    <p>Dirección de obra, controles (personal, stock de materiales, tareas, cornogramas), informes,
+                        registros, planillas de recepción de tareas</p>
                 </div>
                 <div class="col-lg-4">
                     <i class="fas fa-business-time fa-4x icon"></i>
                     <h3>Tramites</h3>
-                    <p>Tramites de intendencia, regularizaciones, habilitacion comercial, declaración jurada de caracterización urbana, habilitacion de bomberos, etc.</p>
+                    <p>Tramites de intendencia, regularizaciones, habilitacion comercial, declaración jurada de
+                        caracterización urbana, habilitacion de bomberos, etc.</p>
                 </div>
             </div>
         </div>
@@ -139,7 +140,7 @@
     <section id="portfolio">
         <div class="container-fluid">
             <h1 class="big-heading">Portfolio</h1>
-            <div class="row">
+            <div class="row section-content">
                 <div class="col-lg-3 portfolio-card">
                     <div class="card" width="18rem">
                         <img class="card-img-top" src="images/Bonaire.png" alt="Bonaire">
@@ -162,7 +163,7 @@
                             <li class="list-group-item">Cliente: Bauen</li>
                             <li class="list-group-item">Ciudad de la Costa</li>
                         </ul>
-                            
+
                     </div>
                 </div>
                 <div class="col-lg-3 portfolio-card">
@@ -194,6 +195,53 @@
 
     </section>
 
+    <hr class="section-divider">
+
+    <!-- Quienes somos section-->
+    <section id="quienesSomos">
+        <div class="white-section container-fluid">
+            <h1 class="big-heading">Quienes somos</h1>
+
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+
+    <!--Contacto section-->
+    <section id="contacto">
+        <div class="white-section container-fluid">
+            <h1 class="big-heading">Contacto</h1>
+            <div class="section-content">
+                <p>Para más información, presupuestos, etc. contactenos!</p>
+                <form action="/" method="POST">
+                    <div class="form-group row form-part">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Nombre</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Nombre Completo">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputAsunto">Asunto</label>
+                            <input type="text" class="form-control" id="inputAsunto" placeholder="Asunto">
+                        </div>
+                    </div>
+                    <div class="form-group form-part">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group form-part">
+                        <label for="inputMensaje">Mensaje</label>
+                        <textarea class="form-control" id="inputMensaje" name="Mensaje"
+                            rows="4">Escriba su mensaje aquí...</textarea>
+                    </div>
+                    <div class="form-part">
+                        <button type="submit" class="btn btn-secondary btn-enviar">Enviar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
 
 
     <footer class="gray-section" id="footer">
