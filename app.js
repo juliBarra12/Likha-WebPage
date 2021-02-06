@@ -2,11 +2,28 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodeMailer = require("nodemailer");
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+
+const oauth2Client = new OAuth2(
+    //ClientID
+    process.env.GOOGLE_CLIEND_ID,
+    //Client Secret
+    process.env.GOOGLE_CLIENT_SECRET,
+    //Redirect URL
+    "https://developers.google.com/oauthplayground"
+
+);
+
+oauth2Client.setCredentials({
+    refresh_token: process.env.REFRESH_TOKEN
+});
+const accessToken = oauth2Client.getAccessToken();
 
 app.route("/")
 .get(function(req, res){
@@ -18,12 +35,20 @@ app.route("/")
         service: "Gmail",
         port: 465,
         auth: {
-            user: process.env.GMAIL_ACCOUNT,
-            pass: process.env.GMAIL_PASSWORD
+            type: "OAuth2",
+            user: "likha.webpage2021@gmail.com",
+            clientId: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            refreshToken: process.env.REFRESH_TOKEN,
+            accessToken: accessToken,
+            
+        },
+        tls: {
+            rejectUnauthorized: false
         }
     });
     let mailOptions = {
-        from: data.email,
+        from: "likha.webpage2021@gmail.com",
         to: 'codingjuliet@gmail.com',
         subject: `Mensaje de ${data.nombre} ~ via Likha Web Page`,
         html: `
@@ -39,13 +64,10 @@ app.route("/")
         `    
     };
     smtpTransport.sendMail(mailOptions, function(e, res){
-        if(e){
-            console.log("Error");
-        } else {
-            console.log("Success");
-        }
+        e ? console.log(e) : console.log(res);
+        smtpTransport.close();
     });
-    smtpTransport.close();
+    
     res.redirect("/")
 });
 
