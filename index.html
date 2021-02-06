@@ -218,21 +218,21 @@
                     <div class="form-group row form-part">
                         <div class="form-group col-md-6">
                             <label for="inputName">Nombre</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Nombre Completo">
+                            <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Nombre Completo" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputAsunto">Asunto</label>
-                            <input type="text" class="form-control" id="inputAsunto" placeholder="Asunto">
+                            <label for="inputAsunto">Telefono</label>
+                            <input type="tel" class="form-control" id="inputTelefono" name="telefono" placeholder="Telefono">
                         </div>
                     </div>
                     <div class="form-group form-part">
                         <label for="inputEmail">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-group form-part">
                         <label for="inputMensaje">Mensaje</label>
-                        <textarea class="form-control" id="inputMensaje" name="Mensaje"
-                            rows="4">Escriba su mensaje aquí...</textarea>
+                        <textarea class="form-control" id="inputMensaje" name="mensaje" placeholder="Escriba su mensaje aqui..."
+                            rows="4" required></textarea>
                     </div>
                     <div class="form-part">
                         <button type="submit" class="btn btn-secondary btn-enviar">Enviar</button>
